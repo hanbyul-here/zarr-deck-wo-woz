@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "latitude",
+        "longitude"
+    ],
+    "colorBarMaximum": 500.0,
+    "colorBarMinimum": 50.0,
+    "coordinates": "time_run time latitude longitude",
+    "ioos_category": "Meteorology",
+    "long_name": "surface downwelling longwave radiation flux",
+    "missing_value": -999000000.0,
+    "standard_name": "surface_downwelling_longwave_flux",
+    "units": "W m-2"
+}

@@ -1,0 +1,533 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "Conventions": "CF-1.6, ACDD-1.3",
+            "Easternmost_Easting": 359.5,
+            "ISO_Topic_Categories": "climatologyMeteorologyAtmosphere",
+            "Northernmost_Northing": 90.0,
+            "Southernmost_Northing": -90.0,
+            "Westernmost_Easting": 0.0,
+            "_CoordSysBuilder": "ucar.nc2.dataset.conv.CF1Convention",
+            "acknowledgement": "The Pacific Islands Ocean Observing System (PacIOOS) is funded through the National Oceanic and Atmospheric Administration (NOAA) as a Regional Association within the U.S. Integrated Ocean Observing System (IOOS). PacIOOS is coordinated by the University of Hawaii School of Ocean and Earth Science and Technology (SOEST).",
+            "cdm_data_type": "Grid",
+            "creator_email": "ncep.list.pmb-dataflow@lstsrv.ncep.noaa.gov",
+            "creator_institution": "NOAA National Centers for Environmental Prediction (NCEP)",
+            "creator_name": "NOAA National Centers for Environmental Prediction (NCEP)",
+            "creator_type": "institution",
+            "creator_url": "https://www.ncep.noaa.gov",
+            "dataType": "Grid",
+            "date_created": "2011-05-06",
+            "date_issued": "2011-06-02",
+            "date_metadata_modified": "2023-01-24",
+            "date_modified": "2023-01-24",
+            "drawLandMask": "under",
+            "geospatial_bounds": "POLYGON ((-90.0 -180.0, 90.0 -180.0, 90.0 180.0, -90.0 180.0, -90.0 -180.0))",
+            "geospatial_bounds_crs": "EPSG:4326",
+            "geospatial_lat_max": 90.0,
+            "geospatial_lat_min": -90.0,
+            "geospatial_lat_resolution": 0.5,
+            "geospatial_lat_units": "degrees_north",
+            "geospatial_lon_max": 359.5,
+            "geospatial_lon_min": 0.0,
+            "geospatial_lon_resolution": 0.5,
+            "geospatial_lon_units": "degrees_east",
+            "history": "2011-06-02T00:00:00Z Subset 0.5-deg NCEP GFS daily from nomads server via OPeNDAP and Python.\n2023-01-24T21:20:00Z Removed erroneous inclusion of \"net\" in the long_name and standard_name of the variables dlwrfsfc (surface_downwelling_longwave_flux) and dswrfsfc (surface_downwelling_shortwave_flux). Added variables ulwrfsfc (surface_upwelling_longwave_flux) and uswrfsfc (surface_upwelling_shortwave_flux) for users wishing to compute net downward fluxes (e.g., dlwrfsfc minus ulwrfsfc and dswrfsfc minus uswrfsfc). ;\nFMRC Best Dataset\n2024-12-10T19:05:51Z https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd\n2024-12-10T19:05:51Z https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ncep_global.nc?tmpsfc%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,tmp2m%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,ugrd10m%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,vgrd10m%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,pratesfc%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,rh2m%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,prmslmsl%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,dlwrfsfc%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D,dswrfsfc%5B(2024-12-17T12:00:00Z):1:(2024-12-17T12:00:00Z)%5D%5B(-90.0):1:(90.0)%5D%5B(0.0):1:(359.5)%5D",
+            "id": "ncep_global",
+            "infoUrl": "https://www.nco.ncep.noaa.gov/pmb/products/gfs/",
+            "institution": "National Oceanic and Atmospheric Administration (NOAA)",
+            "instrument": "Not Applicable > Not Applicable",
+            "instrument_vocabulary": "GCMD Instrument Keywords",
+            "keywords": "Earth Science > Atmosphere > Atmospheric Pressure > Sea Level Pressure, Earth Science > Atmosphere > Atmospheric Radiation > Longwave Radiation, Earth Science > Atmosphere > Atmospheric Radiation > Shortwave Radiation, Earth Science > Atmosphere > Atmospheric Temperature > Surface Air Temperature, Earth Science > Atmosphere > Atmospheric Water Vapor > Humidity, Earth Science > Atmosphere > Atmospheric Winds > Surface Winds, Earth Science > Atmosphere > Precipitation > Rain, Earth Science Services > Models > Weather Research/Forecast Models",
+            "keywords_vocabulary": "GCMD Science Keywords",
+            "license": "The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. Neither the data Contributor, University of Hawaii, PacIOOS, NOAA, State of Hawaii nor the United States Government, nor any of their employees or contractors, makes any warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, or assumes any legal liability for the accuracy, completeness, or usefulness, of this information.",
+            "location": "Proto fmrc:NCEP_Global_Atmospheric_Model",
+            "locations": "Geographic Region > Global Ocean",
+            "locations_vocabulary": "GCMD Location Keywords",
+            "metadata_link": "https://www.pacioos.hawaii.edu/metadata/ncep_global.html",
+            "naming_authority": "org.pacioos",
+            "platform": "Models/Analyses > > NCEP-GFS > NCEP Global Forecast System, Models/Analyses > > Operational Models",
+            "platform_vocabulary": "GCMD Platform Keywords",
+            "program": "Pacific Islands Ocean Observing System (PacIOOS)",
+            "project": "Pacific Islands Ocean Observing System (PacIOOS)",
+            "publisher_email": "info@pacioos.org",
+            "publisher_institution": "Pacific Islands Ocean Observing System (PacIOOS)",
+            "publisher_name": "Pacific Islands Ocean Observing System (PacIOOS)",
+            "publisher_type": "institution",
+            "publisher_url": "http://www.pacioos.hawaii.edu",
+            "references": "https://www.nco.ncep.noaa.gov/pmb/products/gfs/",
+            "source": "NOAA/NCEP Global Forecast System (GFS) numerical weather prediction model",
+            "sourceUrl": "https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd",
+            "standard_name_vocabulary": "CF Standard Name Table v39",
+            "summary": "U.S. National Oceanic and Atmospheric Administration (NOAA) National Centers for Environmental Prediction (NCEP) Global Forecast System (GFS) numerical weather prediction model 8-day, 3-hourly forecast for the globe at approximately 50-km or 0.5-deg resolution.",
+            "testOutOfDate": "now+136hours",
+            "time_coverage_end": "2024-12-17T12:00:00Z",
+            "time_coverage_resolution": "PT3H",
+            "time_coverage_start": "2024-12-17T12:00:00Z",
+            "title": "NOAA/NCEP Global Forecast System (GFS) Atmospheric Model"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "dlwrfsfc/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "dlwrfsfc/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 500.0,
+            "colorBarMinimum": 50.0,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Meteorology",
+            "long_name": "surface downwelling longwave radiation flux",
+            "missing_value": -999000000.0,
+            "standard_name": "surface_downwelling_longwave_flux",
+            "units": "W m-2"
+        },
+        "dswrfsfc/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "dswrfsfc/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 1200.0,
+            "colorBarMinimum": 0.0,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Meteorology",
+            "long_name": "surface downwelling shortwave radiation flux",
+            "missing_value": -999000000.0,
+            "standard_name": "surface_downwelling_shortwave_flux",
+            "units": "W m-2"
+        },
+        "latitude/.zarray": {
+            "chunks": [
+                361
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                361
+            ],
+            "zarr_format": 2
+        },
+        "latitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "latitude"
+            ],
+            "_CoordinateAxisType": "Lat",
+            "actual_range": [
+                -90.0,
+                90.0
+            ],
+            "axis": "Y",
+            "ioos_category": "Location",
+            "long_name": "Latitude",
+            "standard_name": "latitude",
+            "units": "degrees_north"
+        },
+        "longitude/.zarray": {
+            "chunks": [
+                720
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                720
+            ],
+            "zarr_format": 2
+        },
+        "longitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "longitude"
+            ],
+            "_CoordinateAxisType": "Lon",
+            "actual_range": [
+                0.0,
+                359.5
+            ],
+            "axis": "X",
+            "ioos_category": "Location",
+            "long_name": "Longitude",
+            "standard_name": "longitude",
+            "units": "degrees_east"
+        },
+        "pratesfc/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "pratesfc/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 0.004999999888241291,
+            "colorBarMinimum": 0.0,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Meteorology",
+            "long_name": "rainfall rate",
+            "missing_value": -999000000.0,
+            "standard_name": "precipitation_flux",
+            "units": "kg m-2 s-1"
+        },
+        "prmslmsl/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "prmslmsl/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "_CoordinateAxisType": "Pressure",
+            "colorBarMaximum": 102500.0,
+            "colorBarMinimum": 62500.0,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Pressure",
+            "long_name": "mean sea level pressure",
+            "missing_value": -999000000.0,
+            "standard_name": "air_pressure_at_sea_level",
+            "units": "Pa"
+        },
+        "rh2m/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "rh2m/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 100.0,
+            "colorBarMinimum": 0.0,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Meteorology",
+            "long_name": "relative humidity at 2m",
+            "missing_value": -999000000.0,
+            "standard_name": "relative_humidity",
+            "units": "%"
+        },
+        "time/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time"
+            ],
+            "_CoordinateAxisType": "Time",
+            "actual_range": [
+                1734436800.0,
+                1734436800.0
+            ],
+            "axis": "T",
+            "calendar": "proleptic_gregorian",
+            "ioos_category": "Time",
+            "long_name": "Forecast time for ForecastModelRunCollection",
+            "missing_value": NaN,
+            "standard_name": "time",
+            "time_origin": "01-JAN-1970 00:00:00",
+            "units": "seconds since 1970-01-01T00:00:00+00:00"
+        },
+        "tmp2m/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "tmp2m/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 318.15,
+            "colorBarMinimum": 228.15,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Temperature",
+            "long_name": "air temperature at 2m",
+            "missing_value": -999000000.0,
+            "standard_name": "air_temperature",
+            "units": "K"
+        },
+        "tmpsfc/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "tmpsfc/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 318.15,
+            "colorBarMinimum": 228.15,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Temperature",
+            "long_name": "surface air temperature",
+            "missing_value": -999000000.0,
+            "standard_name": "surface_temperature",
+            "units": "K"
+        },
+        "ugrd10m/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "ugrd10m/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 20.0,
+            "colorBarMinimum": -20.0,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Wind",
+            "long_name": "eastward wind velocity at 10m",
+            "missing_value": -999000000.0,
+            "standard_name": "eastward_wind",
+            "units": "m s-1"
+        },
+        "vgrd10m/.zarray": {
+            "chunks": [
+                1,
+                181,
+                360
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": -999000000.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1,
+                361,
+                720
+            ],
+            "zarr_format": 2
+        },
+        "vgrd10m/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "colorBarMaximum": 20.0,
+            "colorBarMinimum": -20.0,
+            "coordinates": "time_run time latitude longitude",
+            "ioos_category": "Wind",
+            "long_name": "northward wind velocity at 10m",
+            "missing_value": -999000000.0,
+            "standard_name": "northward_wind",
+            "units": "m s-1"
+        }
+    },
+    "zarr_consolidated_format": 1
+}

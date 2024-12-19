@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "latitude"
+    ],
+    "_CoordinateAxisType": "Lat",
+    "actual_range": [
+        -90.0,
+        90.0
+    ],
+    "axis": "Y",
+    "ioos_category": "Location",
+    "long_name": "Latitude",
+    "standard_name": "latitude",
+    "units": "degrees_north"
+}

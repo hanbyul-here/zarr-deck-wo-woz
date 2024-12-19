@@ -1,0 +1,16 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "latitude",
+        "longitude"
+    ],
+    "_CoordinateAxisType": "Pressure",
+    "colorBarMaximum": 102500.0,
+    "colorBarMinimum": 62500.0,
+    "coordinates": "time_run time latitude longitude",
+    "ioos_category": "Pressure",
+    "long_name": "mean sea level pressure",
+    "missing_value": -999000000.0,
+    "standard_name": "air_pressure_at_sea_level",
+    "units": "Pa"
+}

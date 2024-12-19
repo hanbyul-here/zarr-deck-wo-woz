@@ -1,0 +1,18 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time"
+    ],
+    "_CoordinateAxisType": "Time",
+    "actual_range": [
+        1734436800.0,
+        1734436800.0
+    ],
+    "axis": "T",
+    "calendar": "proleptic_gregorian",
+    "ioos_category": "Time",
+    "long_name": "Forecast time for ForecastModelRunCollection",
+    "missing_value": NaN,
+    "standard_name": "time",
+    "time_origin": "01-JAN-1970 00:00:00",
+    "units": "seconds since 1970-01-01T00:00:00+00:00"
+}

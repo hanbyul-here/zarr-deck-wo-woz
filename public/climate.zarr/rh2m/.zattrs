@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "latitude",
+        "longitude"
+    ],
+    "colorBarMaximum": 100.0,
+    "colorBarMinimum": 0.0,
+    "coordinates": "time_run time latitude longitude",
+    "ioos_category": "Meteorology",
+    "long_name": "relative humidity at 2m",
+    "missing_value": -999000000.0,
+    "standard_name": "relative_humidity",
+    "units": "%"
+}

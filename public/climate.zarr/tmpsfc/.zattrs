@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "latitude",
+        "longitude"
+    ],
+    "colorBarMaximum": 318.15,
+    "colorBarMinimum": 228.15,
+    "coordinates": "time_run time latitude longitude",
+    "ioos_category": "Temperature",
+    "long_name": "surface air temperature",
+    "missing_value": -999000000.0,
+    "standard_name": "surface_temperature",
+    "units": "K"
+}

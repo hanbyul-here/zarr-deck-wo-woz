@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "latitude",
+        "longitude"
+    ],
+    "colorBarMaximum": 20.0,
+    "colorBarMinimum": -20.0,
+    "coordinates": "time_run time latitude longitude",
+    "ioos_category": "Wind",
+    "long_name": "northward wind velocity at 10m",
+    "missing_value": -999000000.0,
+    "standard_name": "northward_wind",
+    "units": "m s-1"
+}
