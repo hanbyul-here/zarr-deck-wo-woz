@@ -1,4 +1,5 @@
 import { ZarrReader } from "./zarr";
+import ZarritaReader from "./zarr-with-zarrita";
 
 import DeckGL from "@deck.gl/react";
 import { MapViewState } from "@deck.gl/core";
@@ -7,31 +8,53 @@ import { TileLayer } from "@deck.gl/geo-layers";
 import { BitmapLayer } from "@deck.gl/layers";
 import "./App.css";
 
+const baseUrl = window.location.href;
+
+// test dataset
+const zarrUrl = `${baseUrl}climate.zarr`;
+const variable = "tmp2m";
+
+const zarritaReader = await ZarritaReader.initialize({ zarrUrl });
+await zarritaReader.fetchVariable({ variable });
+
 const zarrReader = new ZarrReader();
 await zarrReader.fetchData();
+
 const INITIAL_VIEW_STATE: MapViewState = {
   longitude: -122.41669,
   latitude: 37.7853,
-  zoom: 3,
+  zoom: 0,
 };
 
 function tileToLatLng({ x, y, z }) {
-  const lon_deg = ((x * 360) / Math.pow(2, z) - 180).toFixed(5);
-  const lat_deg = (
-    (360 / Math.PI) *
-      Math.atan(
-        Math.pow(Math.E, Math.PI - (2 * Math.PI * y) / Math.pow(2, z))
-      ) -
-    90
-  ).toFixed(5);
+  // Number of tiles at this zoom level
+  const n = Math.pow(2, z);
 
-  return {
-    lat: parseFloat(lat_deg),
-    lon: parseFloat(lon_deg),
-  };
+  // Convert tile x,y to longitude/latitude
+  const lon = (x / n) * 360 - 180;
+
+  // Convert y to latitude using inverse mercator projection
+  const latRad = Math.atan(Math.sinh(Math.PI * (1 - (2 * y) / n)));
+  const lat = latRad * (180 / Math.PI);
+
+  return { lon, lat };
+}
+// Helper function to map a single value from [minInput, maxInput] to [0, 255]
+function float2DArrayToUint8ClampedArray(float2DArray) {
+  const minVal = 230;
+  const maxVal = 300;
+
+  const flattenedMappedArray = [...float2DArray].map((dv) => {
+    const normalized = ((dv - minVal) / (maxVal - minVal)) * 255;
+    // Clamp the result to [0, 255] and round, and give it to r value
+    return [Math.max(0, Math.min(255, Math.round(normalized))), 0, 0, 255];
+  });
+
+  // Create a Uint8ClampedArray from the mapped array
+  return new Uint8ClampedArray(flattenedMappedArray.flat());
 }
 
-function float2DArrayToUint8ClampedArray(
+function flatFloat2DArrayToUint8ClampedArray(
   float2DArray,
   minInput = 230,
   maxInput = 300
@@ -52,26 +75,33 @@ function float2DArrayToUint8ClampedArray(
 }
 
 async function getTileData({ index, signal }) {
-  const { x, y, z } = index;
-  const { lon: west, lat: north } = tileToLatLng({ x, y, z });
-  const { lon: east, lat: south } = tileToLatLng({ x: x + 1, y: y + 1, z });
-
   if (signal.aborted) {
     console.error("Signal aborted: ", signal);
     return null;
   }
+
+  const { x, y, z } = index;
+
+  const { lon: west, lat: north } = tileToLatLng({ x, y, z });
+  const { lon: east, lat: south } = tileToLatLng({ x: x + 1, y: y + 1, z });
+
   const northWestBound = { lat: north, lon: west };
   const southEastBound = { lat: south, lon: east };
 
+  const dataFromZarrita = await zarritaReader.getTileData({
+    northWest: northWestBound,
+    southEast: southEastBound,
+  });
   const data = zarrReader.getDataBetweenIndices({
     northWest: northWestBound,
     southEast: southEastBound,
   });
   // https://deck.gl/docs/developer-guide/loading-data#load-resource-without-an-url
-  const imageData = float2DArrayToUint8ClampedArray(data);
+  const imageData = flatFloat2DArrayToUint8ClampedArray(data);
+  const imageData1 = float2DArrayToUint8ClampedArray(dataFromZarrita);
 
   return {
-    imageData,
+    imageData: imageData1,
   };
 }
 

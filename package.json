@@ -1,5 +1,5 @@
 {
-  "name": "my-vue-app",
+  "name": "zarr-deck-exp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,9 +14,9 @@
     "deck.gl": "^9.0.37",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vite-plugin-top-level-await": "^1.4.4",
     "zarr": "^0.6.3",
-    "zarr-js": "^3.3.0"
+    "zarr-js": "^3.3.0",
+    "zarrita": "^0.4.0-next.19"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
@@ -29,6 +29,7 @@
     "globals": "^15.12.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0",
-    "vite": "^6.0.1"
+    "vite": "^6.0.1",
+    "vite-plugin-top-level-await": "^1.5.0"
   }
 }
