@@ -82,24 +82,26 @@ async function getTileData({ index, signal }) {
 
   const { x, y, z } = index;
 
-  const { lon: west, lat: north } = tileToLatLng({ x, y, z });
-  const { lon: east, lat: south } = tileToLatLng({ x: x + 1, y: y + 1, z });
+  // const { lon: west, lat: north } = tileToLatLng({ x, y, z });
+  // const { lon: east, lat: south } = tileToLatLng({ x: x + 1, y: y + 1, z });
 
-  const northWestBound = { lat: north, lon: west };
-  const southEastBound = { lat: south, lon: east };
+  // const northWestBound = { lat: north, lon: west };
+  // const southEastBound = { lat: south, lon: east };
 
-  const dataFromZarrita = await zarritaReader.getTileData({
-    northWest: northWestBound,
-    southEast: southEastBound,
+  // const data = zarrReader.getDataBetweenIndices({
+  //   northWest: northWestBound,
+  //   southEast: southEastBound,
+  // });
+  // const imageData = flatFloat2DArrayToUint8ClampedArray(data);
+
+  const dataFromZarrita = zarritaReader.getTileData({
+    x,
+    y,
+    z,
   });
-  const data = zarrReader.getDataBetweenIndices({
-    northWest: northWestBound,
-    southEast: southEastBound,
-  });
-  // https://deck.gl/docs/developer-guide/loading-data#load-resource-without-an-url
-  const imageData = flatFloat2DArrayToUint8ClampedArray(data);
+
   const imageData1 = float2DArrayToUint8ClampedArray(dataFromZarrita);
-
+  // https://deck.gl/docs/developer-guide/loading-data#load-resource-without-an-url
   return {
     imageData: imageData1,
   };
